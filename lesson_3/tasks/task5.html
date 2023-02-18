@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий
+      автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного
+      засобу, яким він може керувати.
+    </p>
+    <script>
+      let nameOfDriverCategory = prompt(`Введіть назву категорії`, `A,B,C`);
+      const nameOfDriverCategoryToUpperCase =
+        nameOfDriverCategory.toUpperCase();
+
+      const categoryForMotorcycle = `A`,
+        categoryForCar = `B`,
+        categoryForTruck = `C`;
+
+      let nameOfTheVehicle;
+      if (nameOfDriverCategoryToUpperCase === categoryForMotorcycle)
+        nameOfTheVehicle = `Мотоцикл`;
+      else if (nameOfDriverCategoryToUpperCase === categoryForCar)
+        nameOfTheVehicle = "Легковий автомобіль";
+      else if (nameOfDriverCategoryToUpperCase === categoryForTruck)
+        nameOfTheVehicle = "Вантажний автомобіль";
+      else nameOfTheVehicle = "Данні введено не корректно";
+      document.write(nameOfTheVehicle);
+    </script>
+  </body>
+</html>
